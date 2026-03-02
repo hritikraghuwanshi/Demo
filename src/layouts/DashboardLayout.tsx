@@ -1,4 +1,5 @@
 import type * as React from "react";
+import { useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "../components/dashboard/Sidebar";
 import TopNavbar from "../components/dashboard/TopNavbar";
@@ -11,12 +12,21 @@ const routeTitles: Record<string, string> = {
 const DashboardLayout: React.FC = () => {
   const location = useLocation();
   const pageTitle = routeTitles[location.pathname] ?? "Dashboard";
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleToggleSidebar = () => {
+    setIsSidebarOpen((open) => !open);
+  };
+
+  const handleCloseSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div className="flex min-h-screen bg-[#F3F4F6] text-gray-900 dark:bg-[#0F172A] dark:text-white">
-      <Sidebar />
-      <div className="flex flex-1 flex-col pl-64">
-        <TopNavbar pageTitle={pageTitle} />
+      <Sidebar isOpen={isSidebarOpen} onClose={handleCloseSidebar} />
+      <div className="flex flex-1 flex-col pl-0 md:pl-64">
+        <TopNavbar pageTitle={pageTitle} onToggleSidebar={handleToggleSidebar} />
         <main className="flex-1 p-6" id="main-content" aria-label="Dashboard content">
           <Outlet />
         </main>

@@ -60,7 +60,7 @@ const Stats: React.FC = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="text-center"
             >
-              <p className="text-3xl md:text-4xl font-bold text-white">
+              <p className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}

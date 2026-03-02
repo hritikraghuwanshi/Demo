@@ -44,7 +44,14 @@ const Features: React.FC = () => {
 
         <div className="mt-16 grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div key={index} whileHover={{ y: -6 }}>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ y: -6 }}
+            >
               <Card hover className="p-8">
                 <div className="text-indigo-500 mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>

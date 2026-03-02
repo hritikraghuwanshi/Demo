@@ -30,15 +30,15 @@ const TrustedCompanies: React.FC = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6"
+          className="flex flex-wrap justify-center items-center gap-x-8 sm:gap-x-12 gap-y-6"
         >
           {companies.map((company) => (
-            <span
+            <motion.span
               key={company}
               className="text-lg font-semibold text-gray-500 transition-colors hover:text-gray-600 dark:hover:text-gray-400"
             >
               {company}
-            </span>
+            </motion.span>
           ))}
         </motion.div>
       </Container>

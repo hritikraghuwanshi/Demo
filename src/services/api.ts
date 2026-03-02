@@ -40,6 +40,14 @@ export interface AnalyticsResponse {
   stats: AnalyticsStat[];
 }
 
+export interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+  avatar: string;
+}
+
 // ============ MOCK DATA GENERATORS ============
 
 const STATUSES: Transaction["status"][] = ["success", "failed", "pending"];
@@ -81,6 +89,33 @@ function generateAnalytics(): AnalyticsResponse {
   };
 }
 
+const MOCK_TESTIMONIALS: Testimonial[] = [
+  {
+    quote:
+      "PayPilot cut our payment integration time from 3 weeks to 2 days. The API is clean, docs are excellent, and support actually responds.",
+    author: "Sarah Chen",
+    role: "CTO",
+    company: "Flowbase",
+    avatar: "SC",
+  },
+  {
+    quote:
+      "We switched from manual billing to PayPilot's subscription management. Revenue recovery from failed payments went up 40% in the first month.",
+    author: "Marcus Johnson",
+    role: "Founder",
+    company: "SaaSify",
+    avatar: "MJ",
+  },
+  {
+    quote:
+      "The fraud detection caught a suspicious pattern before we lost money. For a fintech startup, that peace of mind is invaluable.",
+    author: "Priya Sharma",
+    role: "Head of Finance",
+    company: "Edify",
+    avatar: "PS",
+  },
+];
+
 // ============ API FUNCTIONS ============
 
 /**
@@ -107,6 +142,20 @@ export async function fetchAnalytics(): Promise<AnalyticsResponse> {
   } catch (err) {
     throw new Error(
       err instanceof Error ? err.message : "Failed to fetch analytics"
+    );
+  }
+}
+
+/**
+ * Fetches testimonials from the API (simulated).
+ */
+export async function fetchTestimonials(): Promise<Testimonial[]> {
+  try {
+    await delay(500);
+    return [...MOCK_TESTIMONIALS];
+  } catch (err) {
+    throw new Error(
+      err instanceof Error ? err.message : "Failed to fetch testimonials"
     );
   }
 }

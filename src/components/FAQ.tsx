@@ -65,7 +65,7 @@ const FAQ: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm dark:border-gray-800 dark:bg-[#111827]/40 dark:shadow-none [&_button]:!bg-gray-900 [&_button]:border-0 [&_button]:dark:!bg-transparent"
+              className="rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm dark:border-gray-800 dark:bg-[#111827]/40 dark:shadow-none"
             >
               <button
                 type="button"
@@ -74,7 +74,7 @@ const FAQ: React.FC = () => {
                 aria-controls={`faq-answer-${index}`}
                 id={`faq-question-${index}`}
                 aria-label={`${openIndex === index ? "Collapse" : "Expand"} question: ${faq.question}`}
-                className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-inset focus-visible:outline-none hover:bg-gray-800 dark:hover:bg-white/[0.02]"
+                className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-inset focus-visible:outline-none bg-gray-900 hover:bg-gray-800 dark:bg-transparent dark:hover:bg-white/[0.02]"
               >
                 <span className="font-medium pr-4 text-white">{faq.question}</span>
                 <FiChevronDown
@@ -96,7 +96,7 @@ const FAQ: React.FC = () => {
                     transition={{ duration: 0.2 }}
                     className="overflow-hidden"
                   >
-                    <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed dark:text-white">
+                    <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed dark:text-gray-300">
                       {faq.answer}
                     </p>
                   </motion.div>

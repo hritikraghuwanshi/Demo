@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ThemeSync from "./components/ThemeSync";
+import ContactModal from "./components/ContactModal";
 import PageLoader from "./components/PageLoader";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { useAuthStore } from "./store/useAuthStore";
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   return (
     <>
       <ThemeSync />
+      <ContactModal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

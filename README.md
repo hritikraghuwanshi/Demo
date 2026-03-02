@@ -5,6 +5,32 @@
 
 PayPilot is a fintech SaaS frontend application designed to reflect how real-world startup and scale-up dashboards are architected and shipped.
 
+---
+
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| **Dark Mode** | Light/dark theme toggle with localStorage persistence |
+| **Responsive** | Mobile-first design with hamburger nav, stacked layouts |
+| **Animations** | Framer Motion scroll-triggered fade-ins, micro-interactions |
+| **Pricing Toggle** | Monthly/Yearly pricing switch with dynamic price updates |
+| **FAQ Accordion** | Smooth expand/collapse with AnimatePresence |
+| **Testimonial Carousel** | Auto-playing slider on mobile, pause on hover |
+| **Contact Modal** | Request Demo / Contact form with real-time validation |
+| **Newsletter Signup** | Footer form with email validation |
+| **Toast Notifications** | Success feedback for form submissions and actions |
+| **Loading States** | Spinner states for CTA buttons and async actions |
+| **Mock API** | Testimonials fetched from simulated API with skeleton loaders |
+
+---
+
+## Why I Built This
+
+I built PayPilot to demonstrate production-ready frontend patterns: state management with Zustand, form validation, accessible modals, performance-conscious animations, and a clean component architecture. The mock API layer shows how easily this can integrate with a real backend.
+
+---
+
 This project showcases my ability to design and implement:
 
 - Scalable frontend architecture
@@ -241,6 +267,7 @@ npm install
 
 # Start development server
 npm run dev
+# Opens at http://localhost:5173
 
 # Build for production
 npm run build
@@ -250,6 +277,8 @@ npm run preview
 ```
 
 Demo authentication is enabled for portfolio review.
+
+> **Tip:** Add screenshots of Hero, Pricing, and Features to your README. Record a 30-60s Loom walkthrough for maximum impact with clients.
 
 ---
 

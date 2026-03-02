@@ -86,3 +86,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Ensure nav buttons respect Tailwind text colors, not global button/link styles */
+nav button {
+  background-color: transparent;
+  border-color: transparent;
+}
