@@ -27,18 +27,14 @@ function AnimatedNumber({
 }) {
   return (
     <span className="tabular-nums">
-      {inView ? (
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          {value}
-          {suffix}
-        </motion.span>
-      ) : (
-        <span>0{suffix}</span>
-      )}
+      <motion.span
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.6 }}
+      >
+        {value}
+        {suffix}
+      </motion.span>
     </span>
   );
 }

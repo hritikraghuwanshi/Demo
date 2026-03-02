@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ButtonLink, Container } from "./ui";
 import DashboardPreview from "./DashboardPreview";
 import toast from "react-hot-toast";
+import { useModalStore } from "../store/modalStore";
 
 const Hero: React.FC = () => {
-  const navigate = useNavigate();
+  const { openModal } = useModalStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGetStarted = async (e: React.MouseEvent) => {
@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
     setIsLoading(true);
     await new Promise((r) => setTimeout(r, 1500));
     setIsLoading(false);
-    toast.success("Welcome to PayPilot!");
-    navigate("/dashboard");
+    openModal("request-demo");
+    toast.success("Tell us a bit about you to get started.");
   };
 
   return (

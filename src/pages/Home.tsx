@@ -7,6 +7,7 @@ import Pricing from "../components/Pricing";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import BackToTop from "../components/BackToTop";
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Home: React.FC = () => {
       <Testimonials />
       <FAQ />
       <Footer />
+      <BackToTop />
     </>
   );
 };

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
-import { ButtonLink, Container } from "./ui";
+import { Container } from "./ui";
 import { useThemeStore } from "../store/themeStore";
 import { useModalStore } from "../store/modalStore";
 
@@ -80,9 +80,13 @@ const Navbar: React.FC = () => {
           >
             {theme === "dark" ? <FiSun size={20} /> : <FiMoon size={20} />}
           </button>
-          <ButtonLink to="/dashboard" variant="primary" className="hidden sm:inline-flex px-4 py-2 text-sm">
+          <button
+            type="button"
+            onClick={() => openModal("request-demo")}
+            className="hidden sm:inline-flex px-4 py-2 text-sm rounded-lg bg-indigo-600 text-white font-medium shadow-md hover:bg-indigo-500 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+          >
             Get Started
-          </ButtonLink>
+          </button>
 
           {/* Mobile menu button */}
           <button
@@ -125,13 +129,13 @@ const Navbar: React.FC = () => {
               >
                 Contact
               </button>
-              <Link
-                to="/dashboard"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block mx-4 mt-4 text-center rounded-lg bg-indigo-600 text-white py-3 font-medium hover:bg-indigo-500"
+              <button
+                type="button"
+                onClick={() => { openModal("request-demo"); setMobileMenuOpen(false); }}
+                className="block mx-4 mt-4 w-[calc(100%-2rem)] text-center rounded-lg bg-indigo-600 text-white py-3 font-medium hover:bg-indigo-500"
               >
                 Get Started
-              </Link>
+              </button>
             </Container>
           </motion.div>
         )}
