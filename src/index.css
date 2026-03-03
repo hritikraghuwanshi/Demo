@@ -92,3 +92,32 @@ nav button {
   background-color: transparent;
   border-color: transparent;
 }
+
+/* FAQ bar: always black with white text so it looks the same in all browsers */
+.faq-trigger {
+  background-color: #111827 !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+.faq-trigger:hover {
+  background-color: #1f2937 !important;
+  border-color: transparent !important;
+}
+.faq-trigger span,
+.faq-trigger svg {
+  color: inherit;
+}
+
+/* Back to top: black box with visible white up-arrow in all browsers */
+.back-to-top-btn {
+  background-color: #111827 !important;
+  color: white !important;
+  border: none !important;
+}
+.back-to-top-btn:hover {
+  background-color: #1f2937 !important;
+}
+.back-to-top-btn svg {
+  color: white !important;
+  stroke: white;
+}

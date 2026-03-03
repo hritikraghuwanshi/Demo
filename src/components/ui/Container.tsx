@@ -13,7 +13,7 @@ const Container: React.FC<ContainerProps> = ({
 }) => {
   return (
     <Component
-      className={`max-w-7xl mx-auto px-6 md:px-20 ${className}`.trim()}
+      className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-20 ${className}`.trim()}
     >
       {children}
     </Component>

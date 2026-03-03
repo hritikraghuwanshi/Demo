@@ -280,6 +280,8 @@ Demo authentication is enabled for portfolio review.
 
 > **Tip:** Add screenshots of Hero, Pricing, and Features to your README. Record a 30-60s Loom walkthrough for maximum impact with clients.
 
+**Social preview:** For link previews (Twitter, Slack, LinkedIn), add a 1200×630 image at `public/og-image.png`. The app uses `og:image` and `twitter:image` pointing to `/og-image.png`. On deploy, set the full URL (e.g. `https://your-domain.com/og-image.png`) in `index.html` if your host doesn’t resolve relative URLs.
+
 ---
 
 # Roadmap (Enterprise-Ready Expansion)

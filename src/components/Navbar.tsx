@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
           <button
             type="button"
             onClick={() => openModal("request-demo")}
-            className={`inline-flex px-4 py-2 text-sm rounded-lg font-medium shadow-md focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:outline-none ${
+            className={`hidden sm:inline-flex px-4 py-2 text-sm rounded-lg font-medium shadow-md focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:outline-none ${
               isScrolled
                 ? "bg-transparent text-gray-900 border border-gray-300 hover:bg-gray-100 dark:bg-transparent dark:text-white dark:border-gray-600 dark:hover:bg-white/5"
                 : "bg-indigo-600 text-white hover:bg-indigo-500"

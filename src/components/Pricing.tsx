@@ -236,8 +236,8 @@ const Pricing: React.FC = () => {
                     ))}
                   </ul>
                   <Button
-                    variant="secondary"
-                    className="mt-8 w-full"
+                    variant="primary"
+                    className="mt-8 w-full !text-white"
                     onClick={() => handleCtaClick(plan)}
                     disabled={loadingPlan !== null}
                   >

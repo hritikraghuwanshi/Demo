@@ -25,9 +25,9 @@ const BackToTop: React.FC = () => {
       type="button"
       onClick={handleClick}
       aria-label="Back to top"
-      className="fixed bottom-6 right-5 z-40 inline-flex h-11 w-11 items-center justify-center rounded-full bg-gray-900/90 text-white shadow-lg shadow-gray-900/30 backdrop-blur hover:bg-gray-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+      className="back-to-top-btn fixed bottom-6 right-5 z-40 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 text-white shadow-lg hover:bg-gray-800 transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900"
     >
-      <FiArrowUp size={20} />
+      <FiArrowUp size={22} className="shrink-0 text-white" />
     </button>
   );
 };

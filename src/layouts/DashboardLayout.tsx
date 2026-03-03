@@ -27,7 +27,7 @@ const DashboardLayout: React.FC = () => {
       <Sidebar isOpen={isSidebarOpen} onClose={handleCloseSidebar} />
       <div className="flex flex-1 flex-col pl-0 md:pl-64">
         <TopNavbar pageTitle={pageTitle} onToggleSidebar={handleToggleSidebar} />
-        <main className="flex-1 p-6" id="main-content" aria-label="Dashboard content">
+        <main className="flex-1 p-4 sm:p-6" id="main-content" aria-label="Dashboard content">
           <Outlet />
         </main>
       </div>

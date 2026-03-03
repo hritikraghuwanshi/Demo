@@ -67,6 +67,7 @@ const FAQ: React.FC = () => {
               transition={{ delay: index * 0.05 }}
               className="rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm dark:border-gray-800 dark:bg-[#111827]/40 dark:shadow-none"
             >
+              {/* Black bar + white text in all browsers/themes for consistent look */}
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -74,7 +75,7 @@ const FAQ: React.FC = () => {
                 aria-controls={`faq-answer-${index}`}
                 id={`faq-question-${index}`}
                 aria-label={`${openIndex === index ? "Collapse" : "Expand"} question: ${faq.question}`}
-                className="flex w-full items-center justify-between px-6 py-5 text-left transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-inset focus-visible:outline-none bg-gray-900 hover:bg-gray-800 dark:bg-transparent dark:hover:bg-white/[0.02]"
+                className="faq-trigger flex w-full items-center justify-between px-6 py-5 text-left transition-colors focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-inset focus-visible:outline-none bg-gray-900 hover:bg-gray-800"
               >
                 <span className="font-medium pr-4 text-white">{faq.question}</span>
                 <FiChevronDown
@@ -94,9 +95,9 @@ const FAQ: React.FC = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.2 }}
-                    className="overflow-hidden"
+                    className="overflow-hidden bg-gray-50 dark:bg-[#111827]/30"
                   >
-                    <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed dark:text-gray-300">
+                    <p className="px-6 pb-5 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                       {faq.answer}
                     </p>
                   </motion.div>
